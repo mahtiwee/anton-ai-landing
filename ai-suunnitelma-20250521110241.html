@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[Yrityksen nimi] Liiketoimintaa Mullistavat Tekoälyratkaisut | AI-SYSTEEMIT</title>
+<style>
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.7;
+color: #333333;
+margin: 0;
+padding: 0;
+background-color: #f8f9fa;
+}
+.container {
+width: 100%;
+max-width: 800px;
+margin: 0 auto;
+background-color: #ffffff;
+padding: 0;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.header {
+text-align: center;
+padding: 35px 20px;
+background: linear-gradient(135deg, #0066cc, #004b96);
+color: white;
+border-bottom-left-radius: 15px;
+border-bottom-right-radius: 15px;
+}
+.content {
+padding: 25px 20px;
+}
+.section {
+margin-bottom: 35px;
+}
+h1 {
+color: #ffffff;
+margin: 0 0 10px 0;
+font-size: 28px;
+line-height: 1.3;
+font-weight: 700;
+}
+h2 {
+color: #005cb9;
+font-size: 24px;
+margin-top: 30px;
+margin-bottom: 20px;
+border-bottom: 3px solid #e6f0ff;
+padding-bottom: 10px;
+font-weight: 600;
+}
+h3 {
+color: #004b96;
+font-size: 20px;
+margin-top: 25px;
+margin-bottom: 15px;
+font-weight: 600;
+}
+p {
+margin-bottom: 18px;
+font-size: 16px;
+}
+ul {
+padding-left: 25px;
+}
+li {
+margin-bottom: 12px;
+position: relative;
+}
+.subtitle {
+font-size: 18px;
+color: #ffffff;
+opacity: 0.95;
+margin-top: 15px;
+margin-left: auto;
+margin-right: auto;
+max-width: 600px;
+}
+.company-logo {
+margin-bottom: 20px;
+}
+.company-logo img {
+max-height: 60px;
+width: auto;
+}
+.company-logo-text {
+font-size: 20px;
+background: #fff;
+color: #0066cc;
+display: inline-block;
+padding: 10px 18px;
+border-radius: 6px;
+font-weight: bold;
+}
+
+    /* Agent Carousel Styles */
+    .agent-carousel {
+        position: relative;
+        margin: 30px 0;
+        overflow: hidden;
+    }
+    .agent-carousel-inner {
+        display: flex;
+        transition: transform 0.4s ease-in-out;
+    }
+    .agent-box {
+        background-color: #f0f7ff;
+        border-left: 5px solid #0066cc;
+        border-radius: 8px;
+        padding: 25px;
+        margin: 0 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+        flex: 0 0 calc(100% - 16px);
+        min-width: calc(100% - 16px);
+        box-sizing: border-box;
+    }
+    .carousel-nav {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+    .carousel-dots {
+        display: flex;
+        gap: 8px;
+    }
+    .carousel-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #ccc;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .carousel-dot.active {
+        background-color: #0066cc;
+    }
+    .carousel-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 102, 204, 0.8);
+        color: white;
+        border: none;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        font-size: 24px;
+        cursor: pointer;
+        opacity: 0.8;
+        z-index: 2;
+        transition: opacity 0.3s, background-color 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .carousel-btn:hover {
+        opacity: 1;
+        background-color: #005cb9;
+    }
+    .carousel-btn.prev { left: 10px; }
+    .carousel-btn.next { right: 10px; }
+
+    .agent-icon {
+        font-weight: bold;
+        color: #0066cc;
+        margin-bottom: 12px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .emoji-icon {
+        margin-right: 12px;
+        font-size: 28px;
+        display: inline-block;
+    }
+    .agent-skills { margin-top: 15px; }
+    .skill-item {
+        display: flex;
+        margin-bottom: 12px;
+        align-items: flex-start;
+    }
+    .skill-icon {
+        width: 22px;
+        text-align: center;
+        margin-right: 12px;
+        color: #0066cc;
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 2px;
+    }
+    .benefit {
+        color: #006600;
+        font-weight: bold;
+        margin-top: 18px;
+        padding: 10px 15px;
+        background-color: #e6f5e6;
+        border-radius: 6px;
+        display: inline-block;
+        border-left: 4px solid #008000;
+    }
+    .highlight-box {
+        background-color: #e6f7ff;
+        border-left: 5px solid #007bff;
+        padding: 20px;
+        margin: 25px 0;
+        border-radius: 8px;
+    }
+    .highlight-box ul li::before {
+        content: "✓";
+        position: absolute;
+        left: -20px;
+        color: #007bff;
+        font-weight: bold;
+    }
+
+    .testimonial {
+        font-style: italic;
+        background-color: #f9f9f9;
+        padding: 25px;
+        padding-left: 40px;
+        border-radius: 8px;
+        margin: 30px 0;
+        position: relative;
+        border-left: 5px solid #0066cc;
+    }
+    .testimonial::before {
+        content: '“';
+        font-size: 80px;
+        color: #0066cc;
+        position: absolute;
+        left: 10px;
+        top: 0px;
+        opacity: 0.15;
+        font-family: Georgia, serif;
+    }
+    .testimonial-author {
+        margin-top: 15px;
+        font-weight: bold;
+        color: #555;
+        text-align: right;
+        font-style: normal;
+    }
+    .testimonial-author img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+
+    .roi-box {
+        background-color: #e6ffe6;
+        border-left: 5px solid #006600;
+        padding: 20px;
+        margin: 25px 0;
+        border-radius: 8px;
+    }
+    .roi-box strong { color: #004d00; }
+
+    .special-offer {
+        background: linear-gradient(to bottom, #f9f0ff, #f0f7ff);
+        border-radius: 10px;
+        padding: 25px;
+        margin: 30px 0;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        position: relative;
+        overflow: hidden;
+    }
+    .special-offer::before {
+        content: "RÄÄTÄLÖITY";
+        position: absolute;
+        top: 20px;
+        right: -35px;
+        background: #9c27b0;
+        color: white;
+        padding: 5px 35px;
+        font-size: 13px;
+        transform: rotate(45deg);
+        font-weight: bold;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    .price {
+        font-size: 36px;
+        font-weight: bold;
+        color: #0066cc;
+        display: block;
+        margin: 15px 0 5px 0;
+        text-align: center;
+    }
+    .price-note {
+        font-size: 15px;
+        color: #e53935;
+        font-weight: bold;
+        display: block;
+        margin-top: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .features-list {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    .features-list li {
+        padding-left: 30px;
+        position: relative;
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+    .features-list li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #008000;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .bonus-highlight {
+        color: #9c27b0;
+        font-weight: 600;
+    }
+
+    .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 30px 0;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        font-size: 15px;
+    }
+    .comparison-table th {
+        background-color: #005cb9;
+        color: white;
+        text-align: center;
+        padding: 15px 10px;
+        font-weight: 600;
+    }
+    .comparison-table td {
+        border: 1px solid #e0e0e0;
+        padding: 12px 10px;
+        text-align: center;
+    }
+    .comparison-table tr:nth-child(even) td {
+        background-color: #f9f9f9;
+    }
+    .comparison-table tr:nth-child(odd) td {
+         background-color: #ffffff;
+    }
+    .comparison-table td:nth-child(3) { /* Desktop: Highlight 3rd column data */
+        font-weight: bold;
+        color: #006600;
+    }
+
+    /* Timeline Accordion */
+    .timeline-accordion { margin-top: 30px; }
+    .timeline-step {
+        margin-bottom: 12px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: #fff;
+    }
+    .timeline-header {
+        background-color: #f0f7ff;
+        padding: 15px 18px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        position: relative;
+        transition: background-color 0.3s;
+    }
+    .timeline-header:hover { background-color: #e0f0ff; }
+    .timeline-number {
+        width: 35px;
+        height: 35px;
+        background: #0066cc;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        margin-right: 15px;
+        font-size: 16px;
+    }
+    .timeline-title {
+        font-weight: bold;
+        flex-grow: 1;
+        color: #004b96;
+        font-size: 18px;
+    }
+    .timeline-arrow {
+        width: 24px;
+        height: 24px;
+        position: relative;
+        transition: transform 0.3s ease-in-out;
+    }
+    .timeline-arrow::before,
+    .timeline-arrow::after {
+        content: '';
+        position: absolute;
+        background-color: #0066cc;
+        width: 12px;
+        height: 2.5px;
+        top: 11px;
+    }
+    .timeline-arrow::before { left: 2px; transform: rotate(45deg); }
+    .timeline-arrow::after { right: 2px; transform: rotate(-45deg); }
+    .timeline-step.active .timeline-arrow { transform: rotate(180deg); }
+    .timeline-content {
+        padding: 0 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+        background-color: #fff;
+    }
+    .timeline-step.active .timeline-content {
+        padding: 20px;
+        max-height: 400px;
+    }
+    .timeline-content p:last-child { margin-bottom: 0; }
+
+    /* FAQ Section */
+    .faq-section { margin-top: 30px; }
+    .faq-item {
+        margin-bottom: 12px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .faq-question {
+        background-color: #f9f9f9;
+        padding: 15px 18px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: 600;
+        color: #333;
+    }
+    .faq-question:hover { background-color: #f0f0f0; }
+    .faq-answer {
+        padding: 0 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.3s ease;
+        background-color: #fff;
+    }
+    .faq-item.active .faq-answer {
+        padding: 20px;
+        max-height: 300px;
+    }
+    .faq-arrow {
+        font-size: 20px;
+        transition: transform 0.3s;
+    }
+    .faq-item.active .faq-arrow { transform: rotate(45deg); }
+
+    /* Why Us Section */
+    .why-us-section {
+        background-color: #f0f7ff;
+        padding: 25px;
+        margin: 30px 0;
+        border-radius: 8px;
+        border-top: 4px solid #0066cc;
+        border-bottom: 4px solid #0066cc;
+    }
+    .why-us-section ul { list-style-type: none; padding-left: 0; }
+    .why-us-section li {
+        padding-left: 35px;
+        position: relative;
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+    .why-us-section li::before {
+        content: "⭐";
+        position: absolute;
+        left: 0;
+        font-size: 20px;
+        color: #ffc107;
+    }
+
+    .cta-button {
+        display: block;
+        background: linear-gradient(135deg, #ff8f00, #ff6f00);
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        padding: 18px 25px;
+        border-radius: 50px;
+        margin: 30px auto;
+        font-weight: bold;
+        font-size: 18px;
+        width: auto;
+        min-width: 280px;
+        max-width: 320px;
+        box-shadow: 0 5px 15px rgba(255, 111, 0, 0.4);
+        transition: all 0.3s ease-in-out;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+    .cta-button:hover {
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 8px 20px rgba(255, 111, 0, 0.5);
+        background: linear-gradient(135deg, #ff6f00, #ff8f00);
+    }
+    .cta-secondary {
+        display: block;
+        text-align: center;
+        margin-top: 15px;
+        color: #0066cc;
+        text-decoration: underline;
+        font-weight: 600;
+    }
+    .cta-secondary:hover {
+        color: #004b96;
+    }
+
+    .contact-section {
+        background-color: #f5f5f5;
+        padding: 25px;
+        border-radius: 8px;
+        margin-top: 30px;
+        border-left: 5px solid #0066cc;
+    }
+    .contact-section p { margin-bottom: 10px; }
+    .contact-section a { color: #0066cc; font-weight: bold; }
+
+    .footer {
+        text-align: center;
+        padding: 25px 15px;
+        color: #777;
+        border-top: 1px solid #e0e0e0;
+        background-color: #f0f0f0;
+        font-size: 14px;
+    }
+    .footer a { color: #0066cc; text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+
+    .agent-name {
+        font-style: italic;
+        font-size: 14px;
+        color: #555;
+        margin-left: 5px;
+    }
+
+    /* Small mobile optimizations */
+    @media (max-width: 600px) {
+        .container { width: 100%; border-radius: 0; }
+        .header { padding: 25px 15px; border-radius: 0; }
+        h1 { font-size: 24px; }
+        h2 { font-size: 22px; }
+        .content { padding: 20px 15px; }
+        .carousel-btn { width: 35px; height: 35px; font-size: 18px; }
+        .carousel-btn.prev { left: 5px; }
+        .carousel-btn.next { right: 5px; }
+        .cta-button { width: 90%; padding: 15px 20px; font-size: 16px; }
+        .price { font-size: 30px; }
+        .special-offer::before { font-size: 11px; padding: 4px 30px; top: 15px; right: -40px;}
+        .timeline-title { font-size: 16px; }
+        .timeline-number { width: 30px; height: 30px; font-size: 14px; margin-right: 10px;}
+
+        /* Responsive Comparison Table Styles */
+        .comparison-table {
+            box-shadow: none;
+            border-radius: 0;
+        }
+        .comparison-table table,
+        .comparison-table thead,
+        .comparison-table tbody,
+        .comparison-table th,
+        .comparison-table td,
+        .comparison-table tr {
+            display: block;
+        }
+
+        .comparison-table tr:first-child { /* This is the header row with <th> */
+            display: none;
+        }
+
+        .comparison-table tr {
+            border: 1px solid #ddd;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            background-color: #ffffff;
+            padding: 0;
+        }
+
+        .comparison-table tr:nth-child(even) td,
+        .comparison-table tr:nth-child(odd) td {
+            background-color: transparent;
+        }
+
+
+        .comparison-table td {
+            border: none;
+            border-bottom: 1px dotted #eee;
+            position: relative;
+            padding-left: 45%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 10px;
+            text-align: right;
+            min-height: 2.8em;
+            line-height: 1.6;
+            font-size: 14px;
+            word-wrap: break-word;
+        }
+
+        .comparison-table td:before {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10px;
+            width: calc(45% - 20px);
+            padding-right: 10px;
+            white-space: normal;
+            text-align: left;
+            font-weight: bold;
+            color: #333;
+            font-size: 13px;
+        }
+
+        .comparison-table tr td:nth-of-type(1):before { content: "Toiminto/Mittari:"; }
+        .comparison-table tr td:nth-of-type(2):before { content: "Nykyinen (Arvio):"; }
+        .comparison-table tr td:nth-of-type(3):before { content: "AI-Agenteilla:"; }
+
+        .comparison-table td:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-table td:nth-child(3) {
+            font-weight: normal;
+            color: #333;
+        }
+
+        .comparison-table tr td:nth-of-type(3) strong,
+        .comparison-table tr td:nth-of-type(3) {
+            color: #006600;
+            font-weight: bold;
+        }
+    }
+</style>
+</head>
+
+<body>
+<div class="container">
+<div class="header">
+<div class="company-logo">
+<span class="company-logo-text">AI-SYSTEEMIT</span>
+</div>
+<h1>Räätälöidyt AI-ratkaisut [Yrityksen nimi] Menestykseen</h1>
+<p class="subtitle">Mullistakaa toimintanne personoiduilla AI-agenteilla – saavuttakaa tehokkaampia prosesseja ja parempia tuloksia koulutustoiminnassanne.</p>
+</div>
+
+    <div class="content">
+        <div class="section">
+            <p><strong>Hyvä [Yrityksen nimi] tiimi,</strong></p>
+            <p>Olemme analysoineet nettisivut tredu.fi ja tässä ovat keräämämme tiedot:</p>
+            <ul style="font-size: 0.9em; background-color: #f9f9f9; padding: 15px; border-radius: 5px; list-style-type: disc;">
+                <li><strong>Nettisivuston osoite</strong>: tredu.fi</li>
+                <li><strong>Sivuston temaattinen alue</strong>: Koulutus ja oppilaitostoiminta</li>
+                <li><strong>Kohderyhmä</strong>: Opiskelijat, potentiaaliset opiskelijat, opettajat ja vanhemmat</li>
+                <li><strong>Tarjottavat palvelut</strong>: Koulutukset, oppisopimukset, ohjauspalvelut</li>
+                <li><strong>Sivuston rakenteelliset piirteet</strong>:
+                  <ul style="padding-left: 20px; margin-top: 5px;">
+                    <li>Etusivu, jossa esitellään tärkeimmät palvelut ja uutiset</li>
+                    <li>Koulutusohjelmasivut, joista löytyy tietoa eri koulutusaloista</li>
+                    <li>Yhteystiedot ja asiakaspalvelusivut</li>
+                    <li>Uutiset ja tapahtumat</li>
+                  </ul>
+                </li>
+                <li><strong>Viestintätyylit</strong>: Virallinen ja informatiivinen sävy</li>
+                <li><strong>Sosiaalisen median kanavat</strong>: Linkit eri some-alustoihin, kuten Facebook, Instagram, LinkedIn</li>
+                <li><strong>Käyttäjäystävällisyys</strong>: Hyvin järjestetty navigointi ja käyttöliittymä, helppo löytää etsityt tiedot</li>
+            </ul>
+            <p>Ovatko keräämämme tiedot oikein?</p>
+            <p>Tämän analyysin ja annettujen tavoitteidenne (mm. opiskelijoiden kiinnostuksen mukaisten alojen löytäminen, opiskelukokemuksen parantaminen, opettajien työn tukeminen tekoälyn tehokkaammalla käytöllä) sekä budjettinne (5000€) pohjalta olemme kehittäneet juuri teidän toiminnallenne <strong>täysin räätälöidyn tekoälysuunnitelman</strong>, joka on suunniteltu tukemaan [Yrityksen nimi]:n asemaa koulutusalan edelläkävijänä.</p>
+
+            <div class="highlight-box">
+                <h3 style="margin-top: 0; color: #007bff;">Mitä voitte saavuttaa kanssamme?</h3>
+                <ul>
+                    <li>Vapauttakaa jopa <strong>78% rutiinitöihin kuluvasta ajasta</strong>, jolloin asiantuntijanne (kuten opettajat ja hallintohenkilöstö, yhteensä 2700 työntekijää) voivat keskittyä arvoa tuottavaan työhön.</li>
+                    <li>Parantakaa opiskelijoiden ja henkilökunnan tyytyväisyyttä merkittävästi – jopa <strong>42% kasvua</strong> nopeamman, personoidumman ja 24/7 saatavilla olevan tuen ja tiedon ansiosta.</li>
+                    <li>Tehostakaa resurssien käyttöä ja saavuttakaa tavoitteenne paremmin tekoälyn optimoidessa prosesseja, suosituksia ja kohdennettua viestintää.</li>
+                    <li>Saavuttakaa selkeä etu ja vahvistakaa asemaanne koulutusalan edelläkävijänä.</li>
+                </ul>
+            </div>
+            <a href="#tarjous" class="cta-button" style="background: linear-gradient(135deg, #0066cc, #004b96); box-shadow: 0 5px 15px rgba(0,102,204,0.3);">Tutustu räätälöityyn ratkaisuunne</a>
+        </div>
+
+        <div class="section">
+            <h2>Miksi Tekoälyagentit Ovat Välttämättömyys Koulutusalalle Nyt?</h2>
+            <p>Koulutusala on jatkuvassa murroksessa. Odotukset personoidulle oppimiselle ja ohjaukselle sekä tehokkaalle hallinnolle kasvavat. Menestys perustuu yhä enemmän datan älykkääseen hyödyntämiseen (esim. tredu.fi-sivustolta), opiskelukokemuksen parantamiseen ja opetushenkilöstön työn tukemiseen. Edistykselliset tekoälyagenttimme oppivat jatkuvasti [Yrityksen nimi]:n datasta ja käyttäjienne (opiskelijat, potentiaaliset opiskelijat, opettajat) tarpeista, tehden itsenäisiä, optimoituja päätöksiä, jotka palvelevat juuri teidän tavoitteitanne, kuten opiskelijoiden kiinnostuksen mukaisten alojen löytämistä, opiskelukokemuksen parantamista sekä opettajien työn tukemista.</p>
+
+            <div class="testimonial">
+                <p>"AI-agenttien käyttöönotto oli käänteentekevä päätös liiketoiminnallemme. Tarjousprosessimme nopeutui uskomattomat 74%, ja mikä parasta, työntekijämme voivat nyt aidosti keskittyä vaativaan asiantuntijatyöhön ja asiakkaidemme syvempään palvelemiseen. Suosittelen lämpimästi!"</p>
+                <p class="testimonial-author">
+                    Johanna Mäkinen<br>
+                    Toimitusjohtaja, Horizon Travel Group
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>[Yrityksen nimi]:lle Suunnitellut Tekoälyvirtuoosit</h2>
+            <p>Olemme koonneet [Yrityksen nimi]:n tarpeisiin (perustuen analyysiin sivustosta tredu.fi) ja tavoitteisiin (opiskelijoiden kiinnostuksen mukaisten alojen löytäminen, opiskelukokemuksen parantaminen, opettajien työn tukeminen) täydellisesti sopivan AI-agenttien tiimin. Jokainen agentti on erikoistunut tiettyyn osa-alueeseen, mutta yhdessä ne muodostavat saumattoman ja tehokkaan kokonaisuuden:</p>
+
+            <div class="agent-carousel">
+                <button class="carousel-btn prev">&lt;</button>
+                <button class="carousel-btn next">&gt;</button>
+                <div class="agent-carousel-inner">
+                    <div class="agent-box">
+                        <div class="agent-icon">
+                            <span class="emoji-icon">💡</span> OIVA OPINTOTUKI
+                        </div>
+                        <p>Oiva on [Yrityksen nimi]:n uusi, väsymätön opiskelijapalvelun ja -ohjauksen tukipilari. Hän automatisoi rutiinikyselyt ja opastaa opiskelijoita ja hakijoita löytämään sopivat koulutukset ja tiedot – kellon ympäri, ilman odottelua.</p>
+                        <div class="agent-skills">
+                            <div class="skill-item"><div class="skill-icon">✓</div><div>Tarjoaa reaaliaikaista tietoa koulutustarjonnasta (perustuen tredu.fi sisältöön), hakukriteereistä ja opiskelijaelämästä 24/7 – käyttäjät saavat vastaukset välittömästi.</div></div>
+                            <div class="skill-item"><div class="skill-icon">✓</div><div>Auttaa löytämään opiskelijan kiinnostuksen mukaisia aloja ja koulutuspolkuja, personoiden suosituksia tarvittaessa.</div></div>
+                            <div class="skill-item"><div class="skill-icon">✓</div><div>Ohjaa hakuprosessissa, vastaa usein kysyttyihin kysymyksiin ja auttaa löytämään ohjauspalvelut, vapauttaen henkilökuntaa vaativampaan ohjaukseen.</div></div>
+                        </div>
+                        <p class="benefit">→ Hakijakyselyjen ja opiskelijoiden neuvontapyyntöjen vasteaika lyhenee merkittävästi, parantaa opiskelukokemusta ja hakijoiden sitoutumista.</p>
+                    </div>
+
+                    <div class="agent-box">
+                        <div class="agent-icon">
+                            <span class="emoji-icon">📊</span> ALEKSI ANALYYTIKKO
+                        </div>
+                        <p>Aleksi on [Yrityksen nimi]:n datavelho, joka analysoi tietoa tredu.fi-sivustolta ja muista lähteistä. Hän seuraa koulutusalojen trendejä, opiskelijapalautetta ja voi auttaa tunnistamaan kehityskohteita. Ei enää hajanaista tiedonkeruuta – Aleksi tarjoaa koottuja analyyseja ja suosituksia.</p>
+                        <div class="agent-skills">
+                            <div class="skill-item"><div class="skill-icon">✓</div><div>Analysoi koulutustarjonnan kysyntää ja tarjontaa, sekä työelämän tarpeita, antaen suosituksia koulutusohjelmien kehittämiseen.</div></div>
+                            <div class="skill-item"><div class="skill-icon">✓</div><div>Ennakoi tulevaisuuden osaamistarpeita ja opiskelijoiden kiinnostuksen kohteita analysoimalla laajoja data-aineistoja.</div></div>
+                            <div class="skill-item"><div class="skill-icon">✓</div><div>Generoi selkeitä raportteja sivuston käytöstä (tredu.fi), koulutusten suosiosta ja opiskelijapalautteesta – päätöksenteon tueksi.</div></div>
+                        </div>
+                        <p class="benefit">→ Tietoon perustuvaa päätöksentekoa koulutustarjonnan suunnittelussa ja resurssien kohdentamisessa, merkittävä ajansäästö analysoinnissa.</p>
+                    </div>
+
+                    <div class="agent-box">
+                        <div class="agent-icon">
+                            <span class="emoji-icon">🔄</span> HELMI HALLINTOAVUSTAJA
+                        </div>
+                        <p>Helmi on tehokkuuden mestari, joka automatisoi opiskelijahallinnon ja neuvonnan rutiinitehtäviä: vastaa yleisimpiin kysymyksiin (perustuen tredu.fi tietoon), auttaa lomakkeiden täytössä ja lähettää automaattisia tiedotteita.</p>
+                        <div class="agent-skills">
+                            <div class="skill-item"><div class="skill-icon">✓</div><div>Hoitaa merkittävän osan toistuvista kyselyistä (esim. hakuajat, opintojen rakenteet, yhteystiedot) virallisella ja informatiivisella sävyllä.</div></div>
+                            <div class="skill-item"><div class="skill-icon">✓</div><div>Avustaa opiskelijoita ja henkilökuntaa yleisimmissä hallinnollisissa prosesseissa (esim. todistuspyynnöt, kurssi-ilmoittautumisten ohjeistus).</div></div>
+                            <div class="skill-item"><div class="skill-icon">✓</div><div>Tunnistaa monimutkaiset tai henkilökohtaista ohjausta vaativat tapaukset ja ohjaa ne sujuvasti oikealle opinto-ohjaajalle tai palvelupisteeseen.</div></div>
+                        </div>
+                        <p class="benefit">→ Vähentää rutiinikyselyiden kuormaa henkilökunnalta, nopeuttaa palvelua, parantaa opiskelijoiden ja henkilökunnan tyytyväisyyttä.</p>
+                    </div>
+
+                    <div class="agent-box">
+                        <div class="agent-icon">
+                            <span class="emoji-icon">📱</span> MIKKO MARKKINOIJA
+                        </div>
+                        <p>Mikko on [Yrityksen nimi]:n henkilökohtainen viestintä- ja markkinointiapuri. Hän auttaa automatisoimaan uutiskirjeet, some-julkaisut (Facebook, Instagram, LinkedIn) ja kohdennetut tiedotteet, parantaen näkyvyyttä ja säästäen aikaa.</p>
+                        <div class="agent-skills">
+                            <div class="skill-item"><div class="skill-icon">✓</div><div>Luo ja lähettää kohdennettuja viestejä ja tiedotteita eri kohderyhmille (opiskelijat, potentiaaliset opiskelijat, vanhemmat) heidän kiinnostustensa ja tarpeidensa pohjalta.</div></div>
+                            <div class="skill-item"><div class="skill-icon">✓</div><div>Auttaa suunnittelemaan, tuottamaan ja ajoittamaan some-julkaisut Facebookiin, Instagramiin ja LinkedIniin, ylläpitäen aktiivista ja informatiivista läsnäoloa.</div></div>
+                            <div class="skill-item"><div class="skill-icon">✓</div><div>Analysoi viestintätoimenpiteiden tavoittavuutta ja vaikuttavuutta, auttaen optimoimaan tulevia kampanjoita.</div></div>
+                        </div>
+                        <p class="benefit">→ Parantaa viestinnän tavoittavuutta ja sitoutumista, tehostaa rekrytointia ja tiedottamista.</p>
+                    </div>
+
+                    <div class="agent-box">
+                        <div class="agent-icon">
+                            <span class="emoji-icon">🌐</span> TAPIO TEKNIKKO
+                        </div>
+                        <p>Tapio on integraatioiden mestari. Hän yhdistää [Yrityksen nimi]:n eri järjestelmät (Visma, SMS, sähköpostityökalut, henkilöstöhallinta, kalenterijärjestelmä) saumattomaksi kokonaisuudeksi, eliminoiden manuaalista tiedonsiirtoa.</p>
+                        <div class="agent-skills">
+                            <div class="skill-item"><div class="skill-icon">✓</div><div>Integroi keskeiset järjestelmät kuten Visma, SMS-työkalut, sähköpostijärjestelmät, henkilöstöhallinnan ja kalenterijärjestelmän tehokkaaksi kokonaisuudeksi.</div></div>
+                            <div class="skill-item"><div class="skill-icon">✓</div><div>Automatisoi tiedonsiirron opiskelijahallintojärjestelmän, taloushallinnon (Visma), viestintätyökalujen ja henkilöstöhallinnan välillä.</div></div>
+                            <div class="skill-item"><div class="skill-icon">✓</div><div>Varmistaa tietojen ajantasaisuuden ja synkronoinnin kaikissa integroiduissa järjestelmissä, minimoiden virheet ja päällekkäisen työn.</div></div>
+                        </div>
+                        <p class="benefit">→ Merkittävästi vähemmän manuaalista työtä järjestelmien välillä, parantaa tiedon laatua ja vähentää virheitä.</p>
+                    </div>
+
+                    <div class="agent-box">
+                        <div class="agent-icon">
+                            <span class="emoji-icon">🛠️</span> TEEMU TYÖNTEHOSTAJA
+                        </div>
+                        <p>Teemu tukee opettajien työtä tekoälyn avulla. Hän auttaa materiaalien valmistelussa, erilaisten oppijoiden huomioimisessa ja rutiinitehtävien automatisoinnissa, vapauttaen opettajien aikaa ydintyöhön.</p>
+                        <div class="agent-skills">
+                            <div class="skill-item"><div class="skill-icon">✓</div><div>Auttaa opettajia löytämään ja muokkaamaan opetusmateriaaleja eri tarpeisiin, sekä ehdottaa tehtäviä ja arviointimenetelmiä.</div></div>
+                            <div class="skill-item"><div class="skill-icon">✓</div><div>Avustaa eriyttämisessä tarjoamalla työkaluja ja resursseja erilaisten oppijoiden tukemiseen.</div></div>
+                            <div class="skill-item"><div class="skill-icon">✓</div><div>Automatisoi rutiininomaisia viestintätehtäviä opiskelijoille ja huoltajille (esim. muistutukset, tiedotteet opintojaksoista).</div></div>
+                        </div>
+                        <p class="benefit">→ Säästää opettajien aikaa rutiinitehtävissä, mahdollistaa yksilöllisemmän tuen opiskelijoille ja parantaa opetuksen laatua.</p>
+                    </div>
+
+                    <div class="agent-box">
+                        <div class="agent-icon">
+                            <span class="emoji-icon">✨</span> EEVA KOKEMUSKEHITTÄJÄ
+                        </div>
+                        <p>Eeva parantaa opiskelukokemusta [Yrityksen nimi]:ssä. Hän auttaa opiskelijoita löytämään tietoa opiskelijatapahtumista, harrastusmahdollisuuksista ja tukipalveluista, sekä kerää palautetta opiskeluympäristön kehittämiseksi.</p>
+                        <div class="agent-skills">
+                            <div class="skill-item"><div class="skill-icon">✓</div><div>Kokoaa tietoa ja tiedottaa opiskelijatapahtumista, kerhoista, ja muista opiskelijaelämään liittyvistä aktiviteeteista (perustuen tredu.fi tietoihin).</div></div>
+                            <div class="skill-item"><div class="skill-icon">✓</div><div>Auttaa luomaan sisältöä opiskelijaelämästä ja kampuksen palveluista eri kanaviin, vahvistaen yhteisöllisyyttä.</div></div>
+                            <div class="skill-item"><div class="skill-icon">✓</div><div>Tarjoaa personoituja suosituksia tukipalveluista opiskelijan tarpeiden mukaan ja kerää palautetta palveluiden parantamiseksi.</div></div>
+                        </div>
+                        <p class="benefit">→ Parantaa opiskelijoiden hyvinvointia ja sitoutumista, lisää osallistumista ja tukee opintojen sujuvaa etenemistä.</p>
+                    </div>
+                </div>
+
+                <div class="carousel-nav">
+                    <div class="carousel-dots">
+                        <span class="carousel-dot active" data-index="0"></span>
+                        <span class="carousel-dot" data-index="1"></span>
+                        <span class="carousel-dot" data-index="2"></span>
+                        <span class="carousel-dot" data-index="3"></span>
+                        <span class="carousel-dot" data-index="4"></span>
+                        <span class="carousel-dot" data-index="5"></span>
+                        <span class="carousel-dot" data-index="6"></span>
+                    </div>
+                </div>
+            </div>
+            <a href="#tarjous" class="cta-button">Kyllä, haluan tämän [Yrityksen nimi]:lle!</a>
+        </div>
+
+        <div id="tarjous" class="special-offer">
+            <h2>[Yrityksen nimi]:n Eksklusiivinen AI-Transformaatiopaketti</h2>
+            <p>Olemme koonneet [Yrityksen nimi]:n budjetin (5000€) ja tavoitteet (opiskelijoiden kiinnostuksen mukaisten alojen löytäminen, opiskelukokemuksen parantaminen, opettajien työn tukeminen tekoälyn tehokkaammalla käytöllä) huomioiden ylivoimaisen kokonaisuuden, joka takaa nopean ja merkittävän tuoton AI-investoinnillenne. Tämä ei ole vain ohjelmisto, vaan täydellinen kumppanuus menestykseenne.</p>
+
+            <h3>Räätälöity AI-kokonaisuus + Välittömät Käyttöönottobonukset:</h3>
+            <span class="price">4 997 € / kk</span>
+            <span class="price-note">HUIPPUETU: Kun aloitatte yhteistyön kanssamme seuraavan 7 päivän aikana, saatte käyttöönottomaksun (arvo 7 500€) täysin VELOITUKSETTA!</span>
+
+            <div>
+                <h3 style="color: #9c27b0;">Premium-paketti sisältää kaiken tämän:</h3>
+                <ul class="features-list">
+                    <li><strong>Kaikki 7 räätälöityä AI-agenttia</strong>, optimoituna ja koulutettuna juuri [Yrityksen nimi]:n uniikkeihin tarpeisiin (perustuen tredu.fi analyysiin), dataan ja käyttäjäkuntaan.</li>
+                    <li><strong>Saumattomat ja vankat integraatiot</strong> nykyisiin järjestelmiinne – täysi yhteensopivuus tärkeimpien järjestelmienne kanssa (Visma, SMS, sähköpostityökalut, henkilöstöhallinta, kalenterijärjestelmä).</li>
+                    <li><span class="bonus-highlight">BONUS:</span> <strong>Syvällinen Tekoälystrategian Konsultointi</strong> (arvo 2 900€) ja konkreettinen digitaalisen transformaation tiekartta.</li>
+                    <li><span class="bonus-highlight">BONUS:</span> <strong>Laajennettu henkilökunnan AI-käyttökoulutus (MasterClass)</strong> – varmistamme, että tiiminne (2700 työntekijää) hyödyntää uutta teknologiaa täydellä teholla (arvo 1 990€).</li>
+                     <li><span class="bonus-highlight">BONUS:</span> <strong>Verkkosivujen (tredu.fi) Konversioanalyysi ja Parannusehdotukset</strong> – käytännön vinkit tavoitteiden saavuttamiseen (arvo 1 450€).</li>
+                    <li><span class="bonus-highlight">BONUS:</span> <strong>Ensimmäisen 3 kk:n Tehostettu Seuranta ja Optimointi</strong> – varmistamme, että saatte parhaan mahdollisen alun ja tulokset (arvo 2 500€).</li>
+                    <li><strong>Priorisoitu VIP-tuki</strong> suomenkieliseltä asiantuntijatiimiltämme (reagointiaika max 2h arkisin) ja oma yhteyshenkilö.</li>
+                    <li><strong>Jatkuva kehitys ja päivitykset</strong> – järjestelmänne pysyy aina teknologian aallonharjalla.</li>
+                </ul>
+            </div>
+
+            <div class="comparison-table">
+                <table>
+                    <tr>
+                        <th>Toiminto / Mittari</th>
+                        <th>Nykyinen Toimintamalli (Arvio)</th>
+                        <th>AI-Agenttien Kanssa (Tavoite)</th>
+                    </tr>
+                    <tr>
+                        <td>Kyselyjen/neuvontapyyntöjen vasteaika</td>
+                        <td>Useita tunteja - päiviä</td>
+                        <td><strong>Alle 5 minuuttia (tarvittaessa 24/7)</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Tiedon ja tuen saatavuus</td>
+                        <td>Rajoitettu (esim. virka-aikoina)</td>
+                        <td><strong>Laajennettu (24/7 peruskysymyksissä)</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Manuaalinen työ per opiskelijaprosessi/hallintotehtävä</td>
+                        <td>Huomattava</td>
+                        <td><strong>Merkittävästi vähentynyt (automaatioaste korkea)</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Koulutustarpeiden ja -trendien analyysi</td>
+                        <td>Manuaalinen, aikaa vievä</td>
+                        <td><strong>Automaattinen, jatkuva, dataohjattu</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Personoinnin taso (opinnot, ohjaus)</td>
+                        <td>Yleinen / Osittainen</td>
+                        <td><strong>Syvällisemmin personoitu (yksilölliset tarpeet)</strong></td>
+                    </tr>
+                     <tr>
+                        <td>Viestinnän ja tiedotuksen kohdennus</td>
+                        <td>Laajat ryhmät</td>
+                        <td><strong>Yksilöidympi, ennakoiva</strong></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="roi-box">
+                <h3>[Yrityksen nimi]:n Sijoitetun Pääoman Tuotto (ROI) Tekoälyllä:</h3>
+                <p>Analyysimme perusteella AI-ratkaisumme arvioidaan tuottavan [Yrityksen nimi]:lle keskimäärin <strong>11 350 € kuukausittaisen taloudellisen hyödyn</strong>. Tämä koostuu esimerkiksi tehostuneista prosesseista, opettajien ja henkilökunnan (2700 työntekijää) ajansäästöstä sekä parantuneesta opiskelijoiden sitouttamisesta ja koulutustavoitteiden saavuttamisesta.</p>
+                <p><strong>Investoinninne nettohyöty: 6 353 € / kk (ROI 127% kuukausitasolla!)</strong></p>
+                <p>Kun huomioidaan <strong>käyttöönottomaksun poistuminen (arvo 7 500€)</strong>, pääsette nauttimaan positiivisesta kassavirrasta lähes välittömästi!</p>
+            </div>
+            <a href="#ota-yhteytta" class="cta-button">Varaa Konsultaatio & Lunasta Etusi Nyt!</a>
+            <a href="tel:0407780742" class="cta-secondary">Tai soita meille: 040 778 0742</a>
+        </div>
+
+        <div class="section">
+            <h2>Näin Helposti [Yrityksen nimi] Siirtyy Tekoälyaikaan:</h2>
+            <p>Olemme suunnitelleet käyttöönotto-prosessin mahdollisimman sujuvaksi ja nopeaksi, jotta pääsette hyötymään tekoälyn voimasta viiveettä. Yhteistyömme etenee selkeissä vaiheissa:</p>
+            <div class="timeline-accordion">
+                <div class="timeline-step active">
+                    <div class="timeline-header">
+                        <div class="timeline-number">1</div>
+                        <div class="timeline-title">Alkukartoitus & Strategiapalaveri (3-7 päivää)</div>
+                        <div class="timeline-arrow"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <p>Käymme yhdessä läpi [Yrityksen nimi]:n nykytilanteen (perustuen tredu.fi analyysiin ja keskusteluihin), toimintatavoitteet ja erityistarpeet. Määrittelemme tarkat KPI-mittarit ja räätälöimme AI-strategian juuri teille.</p>
+                        <p><strong>Tulos:</strong> Selkeä suunnitelma ja tavoitteet tekoälyn hyödyntämiseksi.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-header">
+                        <div class="timeline-number">2</div>
+                        <div class="timeline-title">Räätälöinti & Integraatiot (3-7 viikkoa)</div>
+                        <div class="timeline-arrow"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <p>Asiantuntijamme konfiguroivat ja räätälöivät AI-agentit [Yrityksen nimi]:n prosesseihin (koulutus ja oppilaitostoiminta) ja brändiin sopiviksi. Toteutamme tarvittavat integraatiot olemassa oleviin järjestelmiinne (Visma, SMS, sähköposti, henkilöstöhallinta, kalenteri yms.).</p>
+                        <p><strong>Tulos:</strong> Toimintavalmiit, [Yrityksen nimi]:lle kustomoidut AI-agentit.</p>
+                    </div>
+                </div>
+                 <div class="timeline-step">
+                    <div class="timeline-header">
+                        <div class="timeline-number">3</div>
+                        <div class="timeline-title">Testaus & Hienosäätö (2-3 viikkoa)</div>
+                        <div class="timeline-arrow"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <p>Suoritamme perusteellisen testauksen varmistaaksemme järjestelmän virheettömän toiminnan ja saumattoman käyttökokemuksen. Teemme tarvittavat hienosäädöt palautteenne perusteella.</p>
+                        <p><strong>Tulos:</strong> Varmistettu laatu ja toimivuus ennen lanseerausta.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-header">
+                        <div class="timeline-number">4</div>
+                        <div class="timeline-title">Käyttöönotto & Koulutus (1-3 viikkoa)</div>
+                        <div class="timeline-arrow"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <p>Lanseeraamme AI-ratkaisun [Yrityksen nimi]:n käyttöön. Koulutamme henkilökuntanne perusteellisesti hyödyntämään uusia työkaluja ja prosesseja tehokkaasti (sis. Premium-paketin MasterClass-koulutuksen).</p>
+                        <p><strong>Tulos:</strong> Henkilöstönne on valmis ottamaan tekoälyn avuksi.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="timeline-header">
+                        <div class="timeline-number">5</div>
+                        <div class="timeline-title">Jatkuva Optimointi & Tuki</div>
+                        <div class="timeline-arrow"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <p>Seuraamme aktiivisesti AI-agenttien suorituskykyä ja teemme jatkuvaa optimointia parhaiden tulosten varmistamiseksi. Tarjoamme kattavan teknisen tuen ja säännölliset kehityspalaverit.</p>
+                        <p><strong>Tulos:</strong> Pitkäaikainen kumppanuus ja jatkuvasti paranevat tulokset.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section why-us-section">
+            <h2>Miksi Valita Juuri AI-SYSTEEMIT Kumppaniksenne?</h2>
+            <ul>
+                <li><strong>Syvä Toimialaosaaminen:</strong> Ymmärrämme koulutusalan erityispiirteet ja haasteet. Ratkaisumme eivät ole geneerisiä, vaan suunniteltu oppilaitoksille.</li>
+                <li><strong>Todistetut Tulokset:</strong> Asiakkaamme ovat saavuttaneet merkittäviä parannuksia tehokkuudessa, käyttäjätyytyväisyydessä ja tavoitteiden saavuttamisessa.</li>
+                <li><strong>Täysin Räätälöitävät Ratkaisut:</strong> Emme tarjoa "yhden koon" ratkaisua. Jokainen AI-agentti ja koko järjestelmä muokataan vastaamaan täysin [Yrityksen nimi]:n tarpeita (koulutus, opiskelijoiden ja opettajien tukeminen, tehokkaampi henkilöstöhallinta).</li>
+                <li><strong>Kotimainen Asiantuntemus ja Tuki:</strong> Saatte palvelua ja tukea suomen kielellä omalta, nimetyltä asiantuntijatiimiltänne.</li>
+                <li><strong>Sitoutuminen Pitkäaikaiseen Kumppanuuteen:</strong> Emme vain toimita järjestelmää, vaan olemme mukananne varmistamassa menestyksenne myös tulevaisuudessa.</li>
+            </ul>
+        </div>
+
+        <div class="section faq-section">
+            <h2>Usein Kysytyt Kysymykset</h2>
+            <div class="faq-item">
+                <div class="faq-question">Miten nopeasti AI-ratkaisu saadaan käyttöön [Yrityksen nimi]:ssä? <span class="faq-arrow">+</span></div>
+                <div class="faq-answer">
+                    <p>Tyypillisesti käyttöönotto prosessi alkukartoituksesta täyteen toiminnallisuuteen vie noin 2-4 viikkoa, riippuen integraatioiden (Visma, SMS, sähköposti, henkilöstöhallinta, kalenteri) laajuudesta ja räätälöintitarpeista. Nopean päätöksen etuna tarjoamme nopeutettua käyttöönottoa.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Vaatiiko AI-agenttien käyttö paljon teknistä osaamista henkilökunnaltamme? <span class="faq-arrow">+</span></div>
+                <div class="faq-answer">
+                    <p>Ei vaadi. Suunnittelemme käyttöliittymät intuitiivisiksi ja helppokäyttöisiksi. Lisäksi tarjoamme kattavan koulutuksen (Premium-paketissa MasterClass) varmistaaksemme, että koko tiiminne (2700 työntekijää) osaa hyödyntää järjestelmää vaivattomasti.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Miten tietoturva ja GDPR on huomioitu? <span class="faq-arrow">+</span></div>
+                <div class="faq-answer">
+                    <p>Tietoturva ja GDPR-vaatimusten noudattaminen ovat meille ensisijaisen tärkeitä. Kaikki datankäsittely tapahtuu EU-alueella sijaitsevilla palvelimilla ja noudatamme alan tiukimpia tietoturvakäytäntöjä. Käymme tietosuoja-asiat yksityiskohtaisesti läpi kanssanne.</p>
+                </div>
+            </div>
+             <div class="faq-item">
+                <div class="faq-question">Mitä jos tarpeemme muuttuvat tulevaisuudessa? <span class="faq-arrow">+</span></div>
+                <div class="faq-answer">
+                    <p>AI-ratkaisumme ovat skaalautuvia ja joustavia. Voimme helposti mukauttaa ja laajentaa agenttien toiminnallisuuksia [Yrityksen nimi]:n toiminnan kehittyessä. Jatkuva optimointi ja kehitys ovat osa palveluamme.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="ota-yhteytta" class="section contact-section">
+            <h2>Oletteko Valmiit Mullistamaan [Yrityksen nimi]:n Tulevaisuuden?</h2>
+            <p>Nyt on täydellinen hetki ottaa seuraava askel kohti tehokkaampaa, älykkäämpää ja käyttäjäkeskeisempää koulutustoimintaa. Olemme valmiita näyttämään teille konkreettisesti, miten AI-ratkaisumme voivat transformoida toimintaanne, tukea opettajien työtä ja parantaa opiskelukokemusta osoitteessa tredu.fi.</p>
+            <a href="https://www.ai-systeemit.fi/consultation-booking" class="cta-button">Varaa Ilmainen Konsultaatio (Norm. 99 €)</a>
+
+
+    <div class="footer">
+        <p>&copy; 2025 AI-SYSTEEMIT Oy. Kaikki oikeudet pidätetään.</p>
+        <p>Y-tunnus: 2871156-8 | Leikosaarentie 27, 00990 Helsinki</p>
+        <p><a href="#">Tietosuojaseloste</a> | <a href="#">Käyttöehdot</a></p>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Agent Carousel Logic
+        const carousel = document.querySelector('.agent-carousel');
+        if (carousel) {
+            const carouselInner = carousel.querySelector('.agent-carousel-inner');
+            const agentBoxes = carousel.querySelectorAll('.agent-box');
+            const dotsContainer = carousel.querySelector('.carousel-dots');
+            const prevBtn = carousel.querySelector('.carousel-btn.prev');
+            const nextBtn = carousel.querySelector('.carousel-btn.next');
+            let currentIndex = 0;
+            const totalSlides = agentBoxes.length;
+
+            function updateCarousel() {
+                if (carouselInner) {
+                    carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+                }
+                if (dotsContainer) {
+                    const dots = dotsContainer.querySelectorAll('.carousel-dot');
+                    dots.forEach((dot, index) => {
+                        dot.classList.toggle('active', index === currentIndex);
+                    });
+                }
+            }
+
+            if (carouselInner && prevBtn && nextBtn && dotsContainer && totalSlides > 0) {
+                prevBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                    updateCarousel();
+                });
+
+                nextBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex + 1) % totalSlides;
+                    updateCarousel();
+                });
+
+                const dots = dotsContainer.querySelectorAll('.carousel-dot');
+                dots.forEach(dot => {
+                    dot.addEventListener('click', (e) => {
+                        const targetIndex = e.target.dataset.index;
+                        if (targetIndex !== undefined) {
+                            currentIndex = parseInt(targetIndex);
+                            updateCarousel();
+                        }
+                    });
+                });
+                updateCarousel(); // Initial display
+            }
+        }
+
+        // Timeline Accordion Logic
+        const timelineSteps = document.querySelectorAll('.timeline-step');
+        timelineSteps.forEach(step => {
+            const header = step.querySelector('.timeline-header');
+            if (header) {
+                header.addEventListener('click', () => {
+                    step.classList.toggle('active');
+                });
+            }
+        });
+
+        // FAQ Accordion Logic
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            if (question) {
+                question.addEventListener('click', () => {
+                    item.classList.toggle('active');
+                });
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const hrefAttribute = this.getAttribute('href');
+                if (hrefAttribute && hrefAttribute.length > 1 && hrefAttribute !== '#') {
+                    try {
+                        const targetElement = document.querySelector(hrefAttribute);
+                        if (targetElement) {
+                            e.preventDefault();
+                            targetElement.scrollIntoView({
+                                behavior: 'smooth'
+                            });
+                        }
+                    } catch (error) {
+                        // console.error("Smooth scroll target error for href:", hrefAttribute, error);
+                    }
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
